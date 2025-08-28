@@ -17,8 +17,8 @@ const arr =[];
 const callBtns = document.querySelectorAll('.callBtn');
 for (const callBtn of callBtns) {
     callBtn.addEventListener('click',function(event){
-        const serviceName = event.target.parentNode.parentNode.childNodes[3].childNodes[1].innerText;
-        const serviceNumber = event.target.parentNode.parentNode.childNodes[5].childNodes[1].innerText;
+        const serviceName = event.target.parentNode.parentNode.children[1].children[0].innerText;
+        const serviceNumber = event.target.parentNode.parentNode.children[2].children[0].innerText;
         const balance = parseInt(document.querySelector('.balance').innerText);
         if(balance<20){
             alert("You don't have enough coins to call");
@@ -55,3 +55,8 @@ for (const callBtn of callBtns) {
 
     });
 }
+
+document.getElementById('clear').addEventListener('click', function(){
+    document.querySelector('.rightSideMain').innerText ="";
+    arr.length = 0;
+})
