@@ -41,11 +41,11 @@ for (const callBtn of callBtns) {
         div.innerHTML=`
         <div class="flex justify-between items-center mt-[5%]">
             <div class="div1">
-              <p class="inter font-semibold max-[540px]:text-[0.6rem] text-[0.4rem] sm:text-[0.5rem] md:text-[0.6rem] lg:text-[0.8rem] xl:text-[1.05rem] 2xl:text-[1.25rem]">${element.service}</p>
-              <p class="hind-madurai font-normal max-[540px]:text-[0.6rem] text-[0.4rem] sm:text-[0.5rem] md:text-[0.6rem] lg:text-[0.8rem] xl:text-[1.05rem] 2xl:text-[1.25rem] text-[rgba(92,92,92,1)]">${element.num}</p>
+              <p class="inter font-semibold max-[540px]:text-[0.4rem] text-[0.4rem] sm:text-[0.5rem] md:text-[0.6rem] lg:text-[0.8rem] xl:text-[1.05rem] 2xl:text-[1.25rem]">${element.service}</p>
+              <p class="hind-madurai font-normal max-[540px]:text-[0.4rem] text-[0.4rem] sm:text-[0.5rem] md:text-[0.6rem] lg:text-[0.8rem] xl:text-[1.05rem] 2xl:text-[1.25rem] text-[rgba(92,92,92,1)]">${element.num}</p>
             </div>
             <div class="div2">
-              <p class="hind-madurai font-normal max-[540px]:text-[0.6rem] text-[0.4rem] sm:text-[0.5rem] md:text-[0.6rem] lg:text-[0.8rem] xl:text-[1.05rem] 2xl:text-[1.25rem]">${element.date}</p>
+              <p class="hind-madurai font-normal max-[540px]:text-[0.4rem] text-[0.4rem] sm:text-[0.5rem] md:text-[0.6rem] lg:text-[0.8rem] xl:text-[1.05rem] 2xl:text-[1.25rem]">${element.date}</p>
             </div>
         </div>
         `
