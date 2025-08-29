@@ -17,8 +17,9 @@ const arr =[];
 const callBtns = document.querySelectorAll('.callBtn');
 for (const callBtn of callBtns) {
     callBtn.addEventListener('click',function(event){
-        const serviceName = event.target.parentNode.parentNode.children[1].children[0].innerText;
-        const serviceNumber = event.target.parentNode.parentNode.children[2].children[0].innerText;
+        const parent =  event.target.closest(".card");
+        const serviceName = parent.querySelector('.serviceName').innerText;
+        const serviceNumber = parent.querySelector('.serviceNumber').innerText;
         const balance = parseInt(document.querySelector('.balance').innerText);
         if(balance<20){
             alert("You don't have enough coins to call");
@@ -60,3 +61,27 @@ document.getElementById('clear').addEventListener('click', function(){
     document.querySelector('.rightSideMain').innerText ="";
     arr.length = 0;
 })
+
+
+const copyBtns = document.querySelectorAll('.copyBtn');
+for (const copyBtn of copyBtns) {
+    copyBtn.addEventListener('click',function(){
+        const copyCount = parseInt(text('copyCount'));
+        const newCopyCount = copyCount + 1 ;
+        document.getElementById('copyCount').innerText = newCopyCount;
+    })
+}
+
+for (const copyBtn of copyBtns) {
+    copyBtn.addEventListener('click',function(event){
+        const parent =  event.target.closest(".card");
+        copyText = parent.querySelector('.serviceNumber').innerText;
+        navigator.clipboard.writeText(copyText)
+         .then(() => {
+            alert('text copied to clipboard');
+        }).catch((err) => {
+            alert('failed to copy text'+err);
+        });
+    })
+
+}
